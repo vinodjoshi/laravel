@@ -22,10 +22,13 @@ class UserDetailController extends Controller
             $UserDetails->product_id = $data['product_id'];
 			
             if($UserDetails->save()){
-				
-				Mail::send('emails.welcome', $data, function ($message) {
-					$message->to('vinodjoshi6219@yahoo.com');
-					$message->subject('Demo mail');
+                $email = $data['email'];
+                $subject = 'Demo mail'; // subject you want for you email
+                
+				Mail::send('emails.welcome', $data, function ($message) use($email, $subject) {
+				    $message->from('fromMail'); //Your email from you want to  send email 
+					$message->to($email);
+					$message->subject($subject);
 				});
 				
 			}
