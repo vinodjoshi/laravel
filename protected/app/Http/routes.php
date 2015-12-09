@@ -11,4 +11,9 @@
 |
 */
 
+// Authentication routes...
+Route::any('admin/register',['uses'=> 'AdminLoginController@RegisterAdmin' ]);
+Route::any('admin',['uses'=> 'AdminLoginController@LoginForm' ]);
+Route::any('admin/listuser',['uses'=> 'AdminLoginController@ListUser' ]);
+
 Route::controller('/', 'UserDetailController');

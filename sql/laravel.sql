@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 07, 2015 at 05:33 PM
+-- Generation Time: Dec 09, 2015 at 06:57 AM
 -- Server version: 10.0.17-MariaDB
 -- PHP Version: 5.6.14
 
@@ -19,6 +19,29 @@ SET time_zone = "+00:00";
 --
 -- Database: `laravel`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin_master`
+--
+
+CREATE TABLE `admin_master` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `remember_token` varchar(255) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin_master`
+--
+
+INSERT INTO `admin_master` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(2, 'vinod', 'vinodjoshi6219@gmail.com', '$2y$10$UqY.hl2mfAeXf8q/ImpSBepIXf2Sbo7H3NV8YY92lhH0jo.B390Ce', '', '2015-12-09 05:28:18', '2015-12-09 05:28:18');
 
 -- --------------------------------------------------------
 
@@ -71,6 +94,12 @@ INSERT INTO `user_details` (`id`, `fullname`, `email`, `order_number`, `product_
 --
 
 --
+-- Indexes for table `admin_master`
+--
+ALTER TABLE `admin_master`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `user_details`
 --
 ALTER TABLE `user_details`
@@ -80,6 +109,11 @@ ALTER TABLE `user_details`
 -- AUTO_INCREMENT for dumped tables
 --
 
+--
+-- AUTO_INCREMENT for table `admin_master`
+--
+ALTER TABLE `admin_master`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `user_details`
 --

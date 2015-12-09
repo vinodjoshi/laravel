@@ -35,10 +35,5 @@ class UserDetailController extends Controller
         }
     }
     
-    public function anyAdmin(){
-        $data = Request::all();
-        $UserDetails =  UserDetails::get();
-        
-        return view('admin.listuser',['data'=>$UserDetails]);
-    }
+   
 }
