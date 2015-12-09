@@ -17,24 +17,19 @@
 <form method="POST" action="{!!URL::to('admin/register')!!}">
     {!! csrf_field() !!}
 
-    <div>
-        Name
-        <input type="text" name="name" value="{{ old('name') }}">
+    <div class="form-group">
+        <label for="fullname">Name:</label>
+        <input type="text" name="name" value="{{ old('name') }}" required>
     </div>
 
-    <div>
-        Email
-        <input type="email" name="email" value="{{ old('email') }}">
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" name="email" value="{{ old('email') }}" required>
     </div>
 
-    <div>
-        Password
-        <input type="password" name="password">
-    </div>
-
-    <div>
-        Confirm Password
-        <input type="password" name="password_confirmation">
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
     </div>
 
     <div>

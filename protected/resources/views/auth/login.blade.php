@@ -17,14 +17,14 @@
 <form method="POST" action="{!!URL::to('admin')!!}">
     {!! csrf_field() !!}
 
-    <div>
-        Email
-        <input type="email" name="email" value="{{ old('email') }}">
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" name="email" value="{{ old('email') }}" required>
     </div>
 
-    <div>
-        Password
-        <input type="password" name="password" id="password">
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
     </div>
 
     <div>
