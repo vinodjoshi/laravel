@@ -32,7 +32,7 @@
         <td>{!! $value->order_number !!}</td>
         <td>{!! $value->product_id !!}</td>
         <td>Notes</td>
-        <td><a href="{!!URL::to('/'.$value->id.'/delete')!!}">Delete</a></td>
+        <td><a href="{!!URL::to('admin/deleteuser/'.$value->id)!!}">Delete</a></td>
       </tr>
     @endforeach
     </tbody>

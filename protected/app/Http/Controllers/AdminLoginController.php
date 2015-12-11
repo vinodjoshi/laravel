@@ -43,4 +43,14 @@ class AdminLoginController extends Controller
         
         return view('admin.listuser',['data'=>$UserDetails]);
 	}
+
+	public function deleteuser($id){
+		$UserDetails =  UserDetails::find($id);
+		$UserDetails->delete();
+
+		$data = Request::all();
+		$UserDetails =  UserDetails::get();
+
+		return view('admin.listuser',['data'=>$UserDetails]);
+	}
 }
